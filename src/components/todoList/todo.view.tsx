@@ -1,6 +1,5 @@
 'use client'
-import React, { useEffect } from 'react';
-import CustomDateTimePicker from '../common/datetimePicker';
+import React from 'react';
 import useTodo from './todo.presenter';
 import CustomModal from '../common/Modal';
 import AddTodo from './commonPart';
