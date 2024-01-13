@@ -22,7 +22,7 @@ function CustomModal({show,handleClose,handleSubmit,children}:Iprops) {
         </Modal.Body>
         <Modal.Footer>
             <button
-              className={todoStyle.button}
+              className={`${todoStyle.button} bg-red-500`}
               onClick={handleClose}
             >
               Close
