@@ -1,27 +1,50 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+ background-color: #F8F7F2;
+ color:#1E1E1E;
+}
+/* body {
+    background-color: #ECF0F3;
+    color: #1E1E1E;
+}
+
+.box_shadow {
+    box-shadow: 10px 5px 15px #d3d3d3,
+        -10px -5px 8px #fff;
+} */
+
+.react-datetime-picker__wrapper {
+    border: 1px solid #ddd !important;
+    padding: 5px 0;
+    border-radius: 5px;
+    color: #1E1E1E;
+}
+
+.h_90vh{
+    height: 90vh;
+}
+.react-datetime-picker__clock{
+    display: none;
+}
+
+.bg-amber-200{
+    background-color: #f4be2a73;
+}
+.bg-red-200{
+    background-color: #ef444460;
+}
+.bg-green-200{
+    background-color: #a0e4395e;
+}
+input:focus-visible{
+    outline:2px solid #2564eb79;
 }
