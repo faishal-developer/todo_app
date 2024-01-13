@@ -4,19 +4,19 @@ import { status } from "@/utils/utils";
 
 // local storage management
 export const createDataLS = (data: any, property: string) => {
-  if (typeof window === undefined) return [];
+  if (typeof window === "undefined") return [];
   let newData = JSON.stringify(data);
   localStorage.setItem(property, newData);
 };
 
 export const getDataLS = (property: string) => {
-  if (typeof window === undefined) return [];
+  if (typeof window === "undefined") return [];
   let data = localStorage.getItem(property);
   return data ? JSON.parse(data) : [];
 };
 
 export const DeleteDataLS = (property: string) => {
-  if (typeof window === undefined) return;
+  if (typeof window === "undefined") return;
   localStorage.removeItem(property);
 };
 // local storage management
