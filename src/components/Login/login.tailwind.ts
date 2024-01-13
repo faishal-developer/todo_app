@@ -1,6 +1,7 @@
 // styles for login page
 export const loginStyle = {
-  login_cont: "flex items-center justify-center h-screen bg-gray-100",
+  login_cont:
+    "flex rounded-lg items-center justify-center h-screen bg-gray-100",
   login_box: "bg-white p-8 rounded shadow-md w-96",
   h2: "text-3xl font-extrabold text-gray-900 mb-6",
   label: "block text-sm font-medium text-gray-700",
