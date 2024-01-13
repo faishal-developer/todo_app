@@ -1,3 +1,4 @@
+"use client";
 import { createDataLS, getDataLS } from "@/helper/helper";
 import { lsnames } from "@/utils/utils";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
