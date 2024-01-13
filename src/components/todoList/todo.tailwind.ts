@@ -5,9 +5,9 @@ export const todoStyle = {
   heading: " text-3xl font-extrabold mb-4",
   button:
     "bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-700",
-  li: "flex px-2 items-center border-b py-2",
+  li: "flex px-2 items-center border-b py-2 items-center",
   title: "w-36 break-words",
-  time: "w-32 break-words mx-1",
+  time: "w-32 break-words mx-0 sm:mx-1",
   deleteBtn: "text-red-500 mx-2 hover:text-red-600 focus:outline-none",
   editBtn: "text-amber-500 hover:text-amber-600 focus:outline-none",
   no_todo: "text-red-500 text-xl",

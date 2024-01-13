@@ -43,8 +43,10 @@ const TodoList = () => {
               ${getClassNames(todo.time,date?.toString(),todo.status as string)}
             `}
           >
-            <span className={style.title}>{todo?.title}</span>
-            <span className={style.time}>{new Date(todo.time)?.toLocaleString()}</span>
+            <div className='flex flex-col sm:flex-row sm:items-center'>
+              <span className={`${style.title}`}>{todo?.title}</span>
+              <span className={`${style.time}`}>{new Date(todo.time)?.toLocaleString()}</span>
+            </div>
             <span className={`${colorfinderForStatus(todo?.status as string)} w-20`}>{todo?.status}</span>
             <button
               className={style.deleteBtn}
