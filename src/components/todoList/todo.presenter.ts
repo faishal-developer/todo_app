@@ -20,12 +20,14 @@ const useTodo = () => {
     todo: {},
   });
 
+  // checks after every five seconds where any work with in 1 hour range
   useEffect(() => {
     setInterval(() => {
       setDate(new Date());
-    }, 3000);
+    }, 5000);
   }, []);
 
+  // add to todo implementation
   const addTodo = () => {
     const error = validateCreation(setValidateNewTodo);
     if (!!error.title || !!error.time) return;
@@ -35,6 +37,7 @@ const useTodo = () => {
 
   const setTodos = () => {};
 
+  // add to todo validation logic
   const validateCreation = (func: ({}: any) => void) => {
     const error: Ierror = {};
     if (!newTodo.title.trim()) {
@@ -43,13 +46,14 @@ const useTodo = () => {
     if (true) {
       error.time = !newTodo.time ? "Please provide a valid time" : null;
       if (new Date() > new Date(newTodo.time))
-        error.time = "you selected a previous date";
+        error.time = "you selected a previous time";
     }
     func({ ...error });
     console.log("error", error, newTodo);
     return error;
   };
 
+  // add to todo change handler
   const changeHandle = (e: any) => {
     if (e?.target?.name === "title") {
       setNewTodo({ ...newTodo, title: e.target.value });
@@ -66,6 +70,7 @@ const useTodo = () => {
     }
   };
 
+  // update todo onchange handler
   const changeModalHandle = (e: any) => {
     if (e?.target?.name === "title") {
       setShow({ ...show, todo: { ...show.todo, title: e.target.value } });
@@ -76,11 +81,13 @@ const useTodo = () => {
     }
   };
 
+  // update todo logic
   const submitEdit = () => {
     dispatch(updateTodo(show.todo));
     setShow({ show: false, todo: {} });
   };
 
+  // remove todo logic
   const removeTodo = (index: number) => {
     dispatch(removeFromTodo(index));
   };

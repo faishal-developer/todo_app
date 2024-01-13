@@ -1,6 +1,7 @@
 import { ReactElement, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import { todoStyle } from '../todoList/todo.tailwind';
 
 type Iprops={
     show:boolean;
@@ -21,13 +22,13 @@ function CustomModal({show,handleClose,handleSubmit,children}:Iprops) {
         </Modal.Body>
         <Modal.Footer>
             <button
-              className="text-red-500 hover:text-red-600 focus:outline-none"
+              className={todoStyle.button}
               onClick={handleClose}
             >
               Close
             </button>
             <button
-              className="text-blue-500 hover:text-blue-600 focus:outline-none"
+              className={todoStyle.button}
               onClick={handleSubmit}
             >
               Save Changes
