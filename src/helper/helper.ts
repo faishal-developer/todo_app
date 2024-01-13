@@ -1,3 +1,4 @@
+"use client";
 import { status } from "@/utils/utils";
 
 export const properties = {
